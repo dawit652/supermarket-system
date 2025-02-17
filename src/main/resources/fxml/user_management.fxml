@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.presentation.controllers.UserController"
+      alignment="CENTER" spacing="20" styleClass="root">
+    <Label text="User Management" styleClass="title" />
+    <TextField fx:id="usernameField" promptText="Username" styleClass="text-field" />
+    <PasswordField fx:id="passwordField" promptText="Password" styleClass="password-field" />
+    <ComboBox fx:id="roleComboBox" promptText="Role" styleClass="combo-box" />
+    <ComboBox fx:id="branchComboBox" promptText="Branch" styleClass="combo-box" />
+    <Button text="Add User" onAction="#addUser" styleClass="button primary-button" />
+    <Button text="Update User" onAction="#updateUser" styleClass="button secondary-button" />
+</VBox>

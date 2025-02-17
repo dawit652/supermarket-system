@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.supermarket.presentation.controllers.CustomerController" spacing="10" alignment="CENTER">
+    <Label text="Customer Management" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <!-- Table View -->
+    <TableView fx:id="customerTable" prefWidth="600" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200" />
+            <TableColumn fx:id="phoneNumberColumn" text="Phone Number" prefWidth="200" />
+            <TableColumn fx:id="loyaltyPointsColumn" text="Loyalty Points" prefWidth="200" />
+        </columns>
+    </TableView>
+
+    <!-- Input Fields -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Name:" />
+        <TextField fx:id="nameField" prefWidth="200" />
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Phone Number:" />
+        <TextField fx:id="phoneNumberField" prefWidth="200" />
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Loyalty Points:" />
+        <TextField fx:id="loyaltyPointsField" prefWidth="200" />
+    </HBox>
+
+    <!-- Buttons -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add Customer" onAction="#addCustomer" />
+        <Button text="Update Customer" onAction="#updateCustomer" />
+        <Button text="Delete Customer" onAction="#deleteCustomer" />
+        <Button text="Navigate Back" onAction="#navigateBack" />
+    </HBox>
+</VBox>

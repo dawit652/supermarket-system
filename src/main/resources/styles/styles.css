@@ -1,0 +1,82 @@
+/* General Styles */
+.root {
+    -fx-background-color: #f5f5f5; /* Light gray background */
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Title Styles */
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Dark gray text */
+    -fx-padding: 10px 0;
+}
+
+/* TextField and PasswordField Styles */
+.text-field, .password-field {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+/* ComboBox Styles */
+.combo-box {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light gray border */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: #ffffff; /* White text */
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+}
+
+/* Primary Button (e.g., Save, Submit) */
+.primary-button {
+    -fx-background-color: #007bff; /* Blue background */
+}
+
+.primary-button:hover {
+    -fx-background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Secondary Button (e.g., Cancel, Back) */
+.secondary-button {
+    -fx-background-color: #6c757d; /* Gray background */
+}
+
+.secondary-button:hover {
+    -fx-background-color: #5a6268; /* Darker gray on hover */
+}
+
+/* Danger Button (e.g., Delete) */
+.danger-button {
+    -fx-background-color: #dc3545; /* Red background */
+}
+
+.danger-button:hover {
+    -fx-background-color: #c82333; /* Darker red on hover */
+}
+
+/* Toggle Language Button */
+.toggle-language-button {
+    -fx-background-color: #ffc107; /* Yellow background */
+    -fx-text-fill: #000000; /* Black text */
+}
+
+.toggle-language-button:hover {
+    -fx-background-color: #e0a800; /* Darker yellow on hover */
+}

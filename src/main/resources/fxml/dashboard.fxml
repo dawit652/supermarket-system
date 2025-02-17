@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.presentation.controllers.DashboardController"
+            styleClass="root">
+    <top>
+        <Label text="Supermarket Management System" styleClass="title" />
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="20" styleClass="content-box">
+            <Label fx:id="welcomeLabel" styleClass="welcome-label" />
+            <Button fx:id="userManagementButton" text="User Management" onAction="#showUserManagement" styleClass="button primary-button" />
+            <Button fx:id="branchManagementButton" text="Branch Management" onAction="#showBranchManagement" styleClass="button secondary-button" />
+            <Button fx:id="customerManagementButton" text="Customer Management" onAction="#showCustomerManagement" styleClass="button secondary-button" />
+            <Button fx:id="salesManagementButton" text="Sales Management" onAction="#showSalesManagement" styleClass="button primary-button" />
+            <Button fx:id="productManagementButton" text="Product Management" onAction="#showProductManagement" styleClass="button secondary-button" />
+            <Button fx:id="reportsButton" text="Reports" onAction="#showReports" styleClass="button secondary-button" />
+        </VBox>
+    </center>
+    <bottom>
+        <Label text="Copyright © 2024 Supermarket Management System" styleClass="footer-text" />
+    </bottom>
+</BorderPane>

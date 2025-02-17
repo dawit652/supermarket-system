@@ -1,0 +1,42 @@
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.presentation.controllers.InventoryController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Product Management" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+    <!-- Branch Selection -->
+    <HBox spacing="10">
+        <ComboBox fx:id="branchComboBox" promptText="Select Branch" prefWidth="200" />
+    </HBox>
+
+    <!-- Input Fields -->
+    <HBox spacing="10">
+        <TextField fx:id="nameField" promptText="Enter product name" prefWidth="150" />
+        <TextField fx:id="barcodeField" promptText="Enter barcode" prefWidth="150" />
+        <TextField fx:id="priceField" promptText="Enter price" prefWidth="100" />
+        <TextField fx:id="stockField" promptText="Enter stock" prefWidth="100" />
+        <Button text="Add Product" onAction="#addProduct" style="-fx-font-weight: bold;" />
+    </HBox>
+
+    <!-- Product Table -->
+    <TableView fx:id="productTable" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50" />
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150" />
+            <TableColumn fx:id="barcodeColumn" text="Barcode" prefWidth="150" />
+            <TableColumn fx:id="priceColumn" text="Price" prefWidth="100" />
+            <TableColumn fx:id="stockColumn" text="Stock" prefWidth="100" />
+        </columns>
+    </TableView>
+</VBox>

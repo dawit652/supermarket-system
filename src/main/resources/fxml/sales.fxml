@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarket.presentation.controllers.SalesController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- Title -->
+    <Label text="Sales Management" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+
+    <!-- Branch Selection -->
+    <HBox spacing="10">
+        <Label text="Select Branch:" />
+        <ComboBox fx:id="branchComboBox" promptText="Select Branch" prefWidth="200" />
+    </HBox>
+
+    <!-- Product Table -->
+    <TableView fx:id="productTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="priceColumn" text="Price" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="stockColumn" text="Stock" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="stock" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <!-- Quantity Field and Add to Cart Button -->
+    <HBox spacing="10">
+        <TextField fx:id="quantityField" promptText="Quantity" prefWidth="100" />
+        <Button text="Add to Cart" onAction="#addToCart" style="-fx-font-weight: bold;" />
+    </HBox>
+
+    <!-- Discount Field -->
+    <HBox spacing="10">
+        <Label text="Discount (%):" />
+        <TextField fx:id="discountField" promptText="Enter discount" prefWidth="100" />
+    </HBox>
+
+    <!-- Total Price -->
+    <HBox spacing="10">
+        <Label text="Total Price:" />
+        <TextField fx:id="totalPriceField" editable="false" prefWidth="100" />
+    </HBox>
+
+    <!-- Process Sale Button -->
+    <Button text="Process Sale" onAction="#processSale" style="-fx-font-weight: bold;" />
+</VBox>
