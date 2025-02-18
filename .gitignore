@@ -1,1 +1,20 @@
- 
+# IDE-specific files
+.idea/
+*.iml
+
+# Build and dependency files
+target/
+dependency-reduced-pom.xml
+
+# Database files
+supermarket.db
+supermarket.sqbpro
+
+# Temporary or personal files
+question1.txt
+supermarket-project.txt
+supermarket-project2.txt
+Final supermarket-Architecture.txt
+
+# Installers or binaries
+DB.Browser.for.SQLite-v3.13.1-win64.msi 
